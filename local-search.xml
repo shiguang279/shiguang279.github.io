@@ -16,5 +16,24 @@
   
   
   
+  <entry>
+    <title>统计信号处理 第三讲</title>
+    <link href="/2026/04/27/2026-04-27-dsp-3/"/>
+    <url>/2026/04/27/2026-04-27-dsp-3/</url>
+    
+    <content type="html"><![CDATA[<h2 id="统计信号处理-第三讲"><a href="#统计信号处理-第三讲" class="headerlink" title="统计信号处理 第三讲"></a>统计信号处理 第三讲</h2><p><a href="https://www.bilibili.com/video/BV1jLfzBQEP3/?spm_id_from=333.1391.0.0&vd_source=bbdbdd3e2a40115af17c39db38b38ec2">第3讲 现代数字信号处理 哔哩哔哩 bilibili</a></p><p>我们先回顾一下上堂课谈到的三个基本概念。首先我们的统计是针对数据而言的，假设我们有一组数据，这些数据都是随机变量，那么我们假定这些数据服从某种分布，这个分布当中有未知参数，其中的 $\theta$ 就是我们的未知参数。我们做统计的目的是为了能够把数据的分布搞清楚。</p><p>我们上节课谈到过统计其输出是模型或者说分布，这些分布有参数化的。参数化是说这个分布的基本形态是清晰的，只是里面有一些参数不是很清楚。我们统计的目的直接就瞄向这些参数，我们要用这些数据来构造一个函数，这个函数本身也是一个随机变量，那么我们称这个函数就叫做统计，或者我们称它叫一个估计。</p><p><strong>假设：</strong> $X_1, \ldots, X_n \text{ i.i.d.} \sim f(x|\theta)$，其中 $\theta$ 为未知参数 (Unknown)。</p><ol><li><p><strong>统计量与均方误差</strong><br> 设 $g(X_1, \ldots, X_n)$ 为一个统计量（或估计量）。其均方误差定义为：$\text{MSE} &#x3D; E\left[(g(X_1, \ldots, X_n) - \theta)^2\right]$</p></li><li><p><strong>无偏性</strong><br> 若估计量满足以下条件，则称为无偏估计：$E(g(X_1, \ldots, X_n)) &#x3D; \theta, \quad \forall \theta$</p></li><li><p><strong>充分统计量</strong><br> 设 $T &#x3D; T(X_1, \ldots, X_n)$ 为统计量。若样本的条件分布：$f(X_1, \ldots, X_n \mid T)$ 独立于参数 $\theta$，则称 $T$ 为充分统计量。</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>统计信号处理</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
   
 </search>
