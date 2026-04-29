@@ -23,25 +23,6 @@
   
   
   <entry>
-    <title>直角坐标系和球坐标系的转换</title>
-    <link href="/2026/04/27/%E5%9D%90%E6%A0%87%E7%B3%BB/"/>
-    <url>/2026/04/27/%E5%9D%90%E6%A0%87%E7%B3%BB/</url>
-    
-    <content type="html"><![CDATA[<p>空间中的一点可以用 $(x, y, z)$ 和 $(r, \theta, \varphi)$ 来表示。通过几何关系，容易得到直角坐标系下的三个分量与球坐标系下的三个分量之间的代换关系，</p><p>$$<br>\begin{cases}<br>x &#x3D; r \sin \theta \cos \varphi \<br>y &#x3D; r \sin \theta \sin \varphi \<br>z &#x3D; r \cos \theta<br>\end{cases}<br>\tag{1}<br>$$</p><p>逆变换为</p><p>$$<br>\begin{cases}<br>r &#x3D; \sqrt{x^2 + y^2 + z^2}, \<br>\theta &#x3D; \arctan(\sqrt{x^2 + y^2} &#x2F; z) \<br>\varphi &#x3D; \arctan(y &#x2F; x)<br>\end{cases}<br>\tag{2}<br>$$</p><p>接下来推导球坐标系中的单位向量 $\vec{r}, \vec{\theta}, \vec{\varphi}$ 在直角坐标系中的展开。</p><p>我们考虑在点 $(r, \theta, \varphi)$ 上沿 $\vec{r}$ 方向上的单位向量 $(1, \theta, \varphi)$，我们将 $r&#x3D;1$ 代入公式(1)：</p><ol><li><p>计算 x 分量：<br>$$ x &#x3D; 1 \cdot \sin \theta \cos \varphi &#x3D; \sin \theta \cos \varphi $$</p></li><li><p>计算 y 分量：<br>$$ y &#x3D; 1 \cdot \sin \theta \sin \varphi &#x3D; \sin \theta \sin \varphi $$</p></li><li><p>计算 z 分量：<br>$$ z &#x3D; 1 \cdot \cos \theta &#x3D; \cos \theta $$</p></li></ol><p>在直角坐标系中，一个从原点出发的向量可以用它的终点坐标乘以对应的基向量（$\vec{x}, \vec{y}, \vec{z}$ 或常写作 $\hat{i}, \hat{j}, \hat{k}$）来表示。</p><p>所以，这个向量 $\vec{r}$ 就是：<br>$$ \vec{r} &#x3D; x \vec{x} + y \vec{y} + z \vec{z} $$</p><p>将上面计算出的 $x, y, z$ 代入，就得到了：</p><p>$$<br>\vec{r} &#x3D; \sin \theta \cos \varphi , \vec{x} + \sin \theta \sin \varphi , \vec{y} + \cos \theta , \vec{z},<br>$$</p><p>单位向量 $\theta$ 的定义是：当 $r$ 和 $\varphi$ 保持不变，仅让角度 $\theta$ 增加时，点在空间中移动的方向（即 $\theta$ 的切线方向）。因为 $\vec{\theta}$ 垂直于 $\vec{r}$，且指向 $\theta$ 增大的方向，所以在几何上，$\vec{\theta}$ 这个方向，相当于把 $\vec{r}$ 顺时针旋转了 $90^\circ$（即 $\pi&#x2F;2$）。因此，沿 $\vec{\theta}$ 方向上的单位向量为 $(1, \theta + \pi&#x2F;2, \varphi)$，可得</p><p>$$<br>\vec{\theta} &#x3D; \cos \theta \cos \varphi , \vec{x} + \cos \theta \sin \varphi , \vec{y} - \sin \theta , \vec{z},<br>$$</p><p>沿 $\vec{\varphi}$ 方向上的单位向量为 $(1, \pi&#x2F;2, \phi + \pi&#x2F;2)$，可得</p><p>$$<br>\vec{\varphi} &#x3D; -\sin \varphi , \vec{x} + \cos \varphi , \vec{y} + 0 , \vec{z}.<br>$$</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>电磁场</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>pyEM</title>
     <link href="/2026/04/27/project-1/"/>
     <url>/2026/04/27/project-1/</url>
@@ -52,6 +33,25 @@
     <categories>
       
       <category>项目</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>直角坐标系和球坐标系的转换</title>
+    <link href="/2026/04/27/%E5%9D%90%E6%A0%87%E7%B3%BB/"/>
+    <url>/2026/04/27/%E5%9D%90%E6%A0%87%E7%B3%BB/</url>
+    
+    <content type="html"><![CDATA[<p>空间中的一点可以用 $(x, y, z)$ 和 $(r, \theta, \varphi)$ 来表示。通过几何关系，容易得到直角坐标系下的三个分量与球坐标系下的三个分量之间的代换关系，</p><p>$$<br>\begin{cases}<br>x &#x3D; r \sin \theta \cos \varphi, \<br>y &#x3D; r \sin \theta \sin \varphi, \<br>z &#x3D; r \cos \theta<br>\end{cases}<br>\tag{1}<br>$$</p><p>逆变换为</p><p>$$<br>\begin{cases}<br>r &#x3D; \sqrt{x^2 + y^2 + z^2}, \<br>\theta &#x3D; \arctan(\sqrt{x^2 + y^2} &#x2F; z), \<br>\varphi &#x3D; \arctan(y &#x2F; x)<br>\end{cases}<br>\tag{2}<br>$$</p><p>接下来推导球坐标系中的单位向量 $\vec{r}, \vec{\theta}, \vec{\varphi}$ 在直角坐标系中的展开。</p><p>我们考虑在点 $(r, \theta, \varphi)$ 上沿 $\vec{r}$ 方向上的单位向量 $(1, \theta, \varphi)$，我们将 $r&#x3D;1$ 代入公式(1)：</p><ol><li><p>计算 x 分量：<br>$$ x &#x3D; 1 \cdot \sin \theta \cos \varphi &#x3D; \sin \theta \cos \varphi $$</p></li><li><p>计算 y 分量：<br>$$ y &#x3D; 1 \cdot \sin \theta \sin \varphi &#x3D; \sin \theta \sin \varphi $$</p></li><li><p>计算 z 分量：<br>$$ z &#x3D; 1 \cdot \cos \theta &#x3D; \cos \theta $$</p></li></ol><p>在直角坐标系中，一个从原点出发的向量可以用它的终点坐标乘以对应的基向量（$\vec{x}, \vec{y}, \vec{z}$ 或常写作 $\hat{i}, \hat{j}, \hat{k}$）来表示。</p><p>所以，这个向量 $\vec{r}$ 就是：<br>$$ \vec{r} &#x3D; x \vec{x} + y \vec{y} + z \vec{z} $$</p><p>将上面计算出的 $x, y, z$ 代入，就得到了：</p><p>$$<br>\vec{r} &#x3D; \sin \theta \cos \varphi , \vec{x} + \sin \theta \sin \varphi , \vec{y} + \cos \theta , \vec{z},<br>$$</p><p>单位向量 $\theta$ 的定义是：当 $r$ 和 $\varphi$ 保持不变，仅让角度 $\theta$ 增加时，点在空间中移动的方向（即 $\theta$ 的切线方向）。因为 $\vec{\theta}$ 垂直于 $\vec{r}$，且指向 $\theta$ 增大的方向，所以在几何上，$\vec{\theta}$ 这个方向，相当于把 $\vec{r}$ 顺时针旋转了 $90^\circ$（即 $\pi&#x2F;2$）。因此，沿 $\vec{\theta}$ 方向上的单位向量为 $(1, \theta + \pi&#x2F;2, \varphi)$，可得</p><p>$$<br>\vec{\theta} &#x3D; \cos \theta \cos \varphi , \vec{x} + \cos \theta \sin \varphi , \vec{y} - \sin \theta , \vec{z},<br>$$</p><p>沿 $\vec{\varphi}$ 方向上的单位向量为 $(1, \pi&#x2F;2, \phi + \pi&#x2F;2)$，可得</p><p>$$<br>\vec{\varphi} &#x3D; -\sin \varphi , \vec{x} + \cos \varphi , \vec{y} + 0 , \vec{z}.<br>$$</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电磁场</category>
       
     </categories>
     
